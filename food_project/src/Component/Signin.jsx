@@ -1,29 +1,60 @@
+import { useContext, useRef } from "react"
+import { foodsyestem } from "../Store/food-store"
+
 const Signin=()=>{
+  const{loginsignin}=useContext(foodsyestem)
+
+const login_Email=useRef()
+const login_Password=useRef()
+
+
+const handlelogin=(event)=>{
+  event.preventDefault();
+const login_email_Element=login_Email.current.value
+const login_Password_Element=login_Password.current.value
+console.log(login_email_Element)
+console.log(login_Password_Element)
+const loginform={login_email_Element,login_Password_Element}
+loginsignin(loginform)
+
+}
+
     return<>
-    <main class="form-signin w-100 m-auto hee">
-  <form>
-    <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/>
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+   
+   <div className=" full-bg">
 
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
-      <label for="floatingPassword">Password</label>
-    </div>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5 auth-child">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
 
-    <div class="form-check text-start my-3">
-      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault"/>
-      <label class="form-check-label" for="flexCheckDefault">
-        Remember me
-      </label>
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">WELCOME TO FOOD CENTER</h1>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5 p-3">
+  
+        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary ddd">
+        <h4>Sign in</h4>
+          <div class="form-floating mb-3">
+            <input   ref={login_Email} type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input  ref={login_Password}  type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+            <label for="floatingPassword">Password</label>
+          </div>
+         
+          <div class="checkbox mb-3">
+            {/* <label>
+              <input type="checkbox" value="remember-me"/> Remember me
+            </label> */}
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit" onClick={handlelogin}>Sign in</button>
+          <hr class="my-4"/>
+          <small class="text-body-secondary">if you dont have an account click here <a href="/signup">Sign up</a></small>
+        </form>
+      </div>
     </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
-  </form>
-</main>
+  </div>
+  </div>
     </>
 }
 export default Signin

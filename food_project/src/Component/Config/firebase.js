@@ -1,5 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAuth,createUserWithEmailAndPassword} from "firebase/auth";
+import { getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword} from "firebase/auth";
+// import { foodsyestem } from "../../Store/food-store";
+// const {submitsignup}=useContext(foodsyestem)
+
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyCKYfSBcEZOWEINqVi6-IPgo_JqEcw5ltA",
@@ -14,10 +18,19 @@ const firebaseConfig = {
   const app=initializeApp(firebaseConfig)
   const auth=getAuth(app)
 
-  const Register=async()=>{
-  const user_signup= await createUserWithEmailAndPassword(auth, email, password)
+  const Register=async(form)=>{
+const{email,password}=form
+  const user_signup= await createUserWithEmailAndPassword(auth,email,password)
   console.log(user_signup)
+  alert("register successfully")
+  }
+  
+  const LOGIN=async(login)=>{
+    const{login_email_Element,login_Password_Element}=login
+   const user_login=await signInWithEmailAndPassword(auth,login_email_Element,login_Password_Element)
+   alert('login successfully')
   }
   export{
-    Register
+    Register,
+    LOGIN
   }

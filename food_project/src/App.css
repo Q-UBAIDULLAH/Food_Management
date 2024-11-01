@@ -1,8 +1,111 @@
-.hee{
-    background-color: rgb(222, 222, 167);
-    width:24% !important;
-    margin-left: 37%;
-    margin-top: 8%;
-    
+
+.navcolor{
+    background-color: rgb(44, 74, 49);
+
+margin-bottom: 24px;
+
+}
+.head:hover{
+   
+ background-color: black;
+}
+.se-btn{
+width: 110px;
+}
+.auth-child{
+
+    border-style: outset;
+
+
+   
 }
 
+.full-bg {
+    background-image: url('./assets/default-pasta.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh; /* 100% viewport height */
+ /* Replace with desired color */
+ background-color: #c4c1c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.signup-img{
+    border-radius: 10px;
+}
+
+
+.bg{
+    background-color: rgb(18, 14, 14);
+}
+.cover-img{
+    /* border-radius: 10px; */
+
+}
+.jj{
+    padding-left: 80px;
+margin-top:-41px;
+}
+.ll{
+    padding-left: 39px;
+    margin-bottom: 260px;
+}
+.center{
+    background-color: rgb(229, 221, 221);
+    width: 100%; 
+     height: 540px; 
+
+     background-image: url('https://i.pinimg.com/736x/3f/8f/cc/3f8fcc0a2320e6901a18bdd66ff81a42.jpg');
+
+background-size: cover;
+
+
+}
+.pio  
+ {
+    
+  
+    box-shadow: 5px 6px 4px #aaaaaa;
+ 
+  }
+
+.footer{
+    background-color: rgb(180, 182, 177);
+}
+
+.bill-table{
+    /* width: 60%; */
+    border: 1px dotted rgb(201, 191, 203);
+     /* margin: 5%; */
+     /* margin-left: 25%; */
+   height: 430px;
+margin-top: 4%;
+/* border: none; */
+
+   
+}
+
+.thanksorder{
+   color: rgb(200, 147, 55);
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+font-style: italic;
+
+
+}
+
+.confirmorder_img{
+
+    margin-top: 7%;
+
+}
+.secard{
+    width: 200px;
+}
+
+.search-img{
+   height: 260px;
+   padding: 12px;
+}
