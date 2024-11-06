@@ -9,7 +9,7 @@ const UserPassword=useRef()
 const UserName=useRef()
 
 
-const handleSubmit=()=>{
+const handleSubmit=(event)=>{
   event.preventDefault();
   const email=UserEmail.current.value
   const password=UserPassword.current.value
@@ -17,8 +17,9 @@ const handleSubmit=()=>{
 
 
 const valuesform={email,Value_name,password}
-
+console.log(valuesform)
   submitsignup(valuesform)
+
 }
 
     return<>
@@ -26,39 +27,39 @@ const valuesform={email,Value_name,password}
 
 
 
-<div class="container col-xl-10 col-xxl-8 px-4 py-5 auth-child">
-    <div class="row align-items-center g-lg-5 py-5 ">
-      <div class="col-lg-7 text-center text-lg-start ">
+<div className="container col-xl-10 col-xxl-8 px-4 py-5 auth-child">
+    <div className="row align-items-center g-lg-5 py-5 ">
+      <div className="col-lg-7 text-center text-lg-start ">
    
 
-       <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">WELCOME TO FOOD CENTER</h1>
+       <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">WELCOME TO FOOD CENTER</h1>
         
        
       </div>
-      <div class="col-md-10 mx-auto col-lg-5 p-3">
+      <div className="col-md-10 mx-auto col-lg-5 p-3">
   
-        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+        <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary">
         <h4>Sign up</h4>
-          <div class="form-floating mb-3">
-            <input  ref={UserEmail} type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-            <label for="floatingInput">Email address</label>
+          <div className="form-floating mb-3">
+            <input  ref={UserEmail} type="email" className="form-control" id="emailInput" placeholder="name@example.com"/>
+            <label htmlFor="floatingInput">Email address</label>
           </div>
-          <div class="form-floating mb-3">
-            <input  ref={UserPassword} type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
-            <label for="floatingPassword">Password</label>
+          <div className="form-floating mb-3">
+            <input  ref={UserPassword} type="password" className="form-control" id="passwordInput" placeholder="Password"/>
+            <label htmlFor="floatingPassword">Password</label>
           </div>
-          <div class="form-floating mb-3">
-            <input ref={UserName} type="text" class="form-control" id="floatingPassword" placeholder="FullName"/>
-            <label for="floatingPassword">FullName</label>
+          <div className="form-floating mb-3">
+            <input ref={UserName} type="text" className="form-control" id="fullNameInput" placeholder="FullName"/>
+            <label htmlFor="floatingPassword">FullName</label>
           </div>
-          <div class="checkbox mb-3">
+          <div className="checkbox mb-3">
             {/* <label>
               <input type="checkbox" value="remember-me"/> Remember me
             </label> */}
           </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit" onClick={handleSubmit}>Sign up</button>
-          <hr class="my-4"/>
-          <small class="text-body-secondary"></small>
+          <button className="w-100 btn btn-lg btn-primary" type="submit" onClick={handleSubmit}>Sign up</button>
+          <hr className="my-4"/>
+          <small className="text-body-secondary"></small>
         </form>
       </div>
     </div>

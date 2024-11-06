@@ -21,12 +21,18 @@ useEffect(()=>{
 console.log(cocktail,"cocktail")
 
 if(!cocktail.length){
-    return console.log("length loading")
+  return  <div class="text-center">
+  <div class="spinner-border spin" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
 }
 
     return(
         <>
-   <div className="row row-cols-1 row-cols-md-4 g-4 m-2 maincard ">
+      
+   <div className="row row-cols-1 row-cols-md-4 g-4 m-2 maincard  ">
 {cocktail.map((item)=>{
          let money=item.Price=price
 return<CardComponent key={item.idCategory} item={item}></CardComponent>

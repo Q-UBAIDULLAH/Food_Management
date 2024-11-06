@@ -1,10 +1,12 @@
-const Container=({})=>{
+
+const Container=(props)=>{
     return(
         <>
-        <div className="">
-     
+        <div className="editcontainer-wrapper ">
+        <div className="editcontainer ">
+        {props.children}
         </div>
-    
+        </div>
         </>
     )
 }

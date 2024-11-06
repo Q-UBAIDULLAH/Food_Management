@@ -16,16 +16,14 @@ fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
 },[])
 console.log(detail,"detail")
 
-const Order=()=>{
-navigate('/Bill')
-}
+
     return(
         <>
 {detail.map((item)=>{
     if(item.idCategory===idCategory){
         let money=item.Price=price
-      console.log(item,"iditem")
-return<DetailComponent item={item} order={Order}></DetailComponent>
+     
+return<DetailComponent item={item}></DetailComponent>
     }
    
 })}

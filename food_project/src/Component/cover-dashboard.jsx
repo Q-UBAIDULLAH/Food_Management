@@ -4,7 +4,7 @@ const CoverDashboard=()=>{
     return(
         <>
 
-<div className="row flex-lg-row-reverse align-items-center g-5 py-5 m-0  center ">
+<div className="row flex-lg-row-reverse align-items-center g-5 py-5 m-0 center ">
       <div className="col-10 col-sm-8 col-lg-6 jj">
         {/* <img  src="https://thumbs.dreamstime.com/b/kids-eating-kindergarten-food-nursery-home-48100071.jpg" className="d-block mx-lg-auto img-fluid cover-img" alt="Bootstrap Themes" width="600" height="500" loading="lazy"/> */}
       </div>

@@ -1,4 +1,13 @@
+// import { useNavigate } from "react-router-dom"
+
 const Cover=()=>{
+  // const navigate=useNavigate()
+//   function covv(){
+//     setTimeout(() => {
+      
+// navigate('/signup')
+//     }, 2000);
+//   }
 return<>
 <div className="px-4 py-5 my- text-center ">
     <img className="d-block mx-auto mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzYWcUVg_I6A6RSYQ-HKY4Szdq7tBFTc65Eg&s" alt="" width="192" height="97"/>

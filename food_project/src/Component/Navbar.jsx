@@ -5,13 +5,13 @@ import Footer from './Footer'
 import Search from "./Search"
 
 
-const Navbar=()=>{
-  let PRICE=1350
-  const[search,setsearch]=useState("")
-  console.log(search)
-  const[card,setcard]=useState([])
+const Navbar=({setcard,setshow,setsearch,search})=>{
+  // let PRICE=1350
+  // const[search,setsearch]=useState("")
+  // console.log(search)
+  // const[card,setcard]=useState([])
   // const [cocktail, setCocktail] = useState([]);
-  const[show,setshow]=useState(true)
+  // const[show,setshow]=useState(true)
 
   const fetchsearch=()=>{
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
@@ -42,6 +42,7 @@ return(
         </a>
 
         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <img className="navlogo"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LkPXHuVW6koE79bAuBiNucTpk2KbGJqDbaf00D6gx7Vu4n3nnR1LFaAma6LgsAzaAOQ&usqp=CAU" alt="" />
           <li><a href="#" className="nav-link px-2 text-white head">Home</a></li>
           <li><a href="#" className="nav-link px-2 text-white head">Pricing</a></li>
           <li><a href="#" className="nav-link px-2 text-white head">Menu</a></li>
@@ -49,16 +50,16 @@ return(
         </ul>
 
         <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-4" role="search">
-          <input  onChange={(e)=>setsearch(e.target.value)} type="search" className=" form-control form-control-dark text-bg-secondary" placeholder="Search..." aria-label="Search"/>
+          <input  onChange={(e)=>setsearch(e.target.value)} type="search" className=" form-control form-control-dark " placeholder="Search..." aria-label="Search"/>
         </form>
 
         <div className="text-end">
-          {/* <button type="button" className="btn btn-outline-light me-2">Login</button> */}
+      
           <button onClick={fetchsearch} type="button" className="btn btn-warning se-btn">Search</button>
         </div>
       </div>
     </div>
-<div className="center">
+{/* <div className="center">
 <CoverDashboard></CoverDashboard>
 </div>
 
@@ -69,10 +70,10 @@ item.price=PRICE
   return <Search search={search} item={item}/>
 })}</div>:<h2>Not Found result</h2>
 }
-{/* <Search></Search> */}
+
 <div className="footer">
 <Footer></Footer>
-</div>
+</div> */}
 
     </>
 )

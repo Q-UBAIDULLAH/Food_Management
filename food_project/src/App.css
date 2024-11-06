@@ -1,9 +1,31 @@
+.editcontainer-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;  /* Add this */
+    height: 100vh;  /* Add this */
+  
+  }
+    .editcontainer{
+        border: 2px solid black;
+        width: 30%;
+        margin: 15px;
+        padding: 20px;
+        min-width: 330px;
+      
+        
+    }
 
 .navcolor{
-    background-color: rgb(44, 74, 49);
-
+    /* background-color: rgb(44, 74, 49); */
+/* background-color: rgb(21, 135, 21); */
+background-color: rgb(1, 12, 1);
 margin-bottom: 24px;
 
+}
+.navlogo{
+    width: 42px;
+    border-radius: 40px;
+ margin-right: 30px;
 }
 .head:hover{
    
@@ -53,11 +75,12 @@ margin-top:-41px;
     margin-bottom: 260px;
 }
 .center{
-    background-color: rgb(229, 221, 221);
-    width: 100%; 
+margin-top: -12px !important;
+    /* background-color: rgb(229, 221, 221); */
+    width: 100%;  
      height: 540px; 
 
-     background-image: url('https://i.pinimg.com/736x/3f/8f/cc/3f8fcc0a2320e6901a18bdd66ff81a42.jpg');
+      background-image: url('https://i.pinimg.com/736x/3f/8f/cc/3f8fcc0a2320e6901a18bdd66ff81a42.jpg');
 
 background-size: cover;
 
@@ -72,17 +95,18 @@ background-size: cover;
   }
 
 .footer{
-    background-color: rgb(180, 182, 177);
+    /* background-color: rgb(180, 182, 177); */
+    background-color: rgb(94, 113, 94);
+    
 }
 
 .bill-table{
-    /* width: 60%; */
-    border: 1px dotted rgb(201, 191, 203);
-     /* margin: 5%; */
-     /* margin-left: 25%; */
+   
+    border: 2px dotted rgb(201, 191, 203);
+    
    height: 430px;
 margin-top: 4%;
-/* border: none; */
+
 
    
 }
@@ -108,4 +132,19 @@ font-style: italic;
 .search-img{
    height: 260px;
    padding: 12px;
+}
+.confirm-order-container{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.spin{
+    /* background-color: green; */
+    height: 100px;
+    width: 100px;
+}
+.det-img{
+    border-radius: 30px !important;
+ 
 }
